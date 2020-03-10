@@ -1,13 +1,21 @@
 import React from "react";
-import Users from "../src/Components/Users/Users";
-// import GenderDiagram from './Components/GenderDiagram/GenderDiagram';
+
+import Users from "./Components/Users/Users";
+
+
 function App() {
-  return (
-    <div className="App">
-      <Users />
-      {/* <GenderDiagram /> */}
-    </div>
-  );
+    return (
+
+        <div className="App">
+
+            <Users />
+
+
+        </div>
+
+
+    );
 }
+
 
 export default App;

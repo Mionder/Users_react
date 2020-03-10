@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React from "react";
 import "./captionBar.css";
-export default class CaptionBar extends Component{
-    render(){
-        return(
-            <div>
+
+export default function CaptionBar() {
+    return (
+        <div>
             <div className="caption__bar">
                 <li className="nav__caption photo__nav"></li>
                 <li className="nav__caption">Last</li>
@@ -13,7 +13,6 @@ export default class CaptionBar extends Component{
                 <li className="nav__caption">Location</li>
                 <li className=" plus__nav"></li>
             </div>
-            </div>
-        );
-    }
+        </div>
+    );
 }

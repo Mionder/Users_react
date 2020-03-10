@@ -1,52 +1,54 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import CustomizedExpansionPanels from "../CustomizedExpansionPanels/CustomizedExpansionPanels";
 import CaptionBar from "../CaptionBar/CaptionBar";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import "./users.css";
 
-export default class Users extends Component{
+export default class Users extends Component {
     state = {
         users: [],
         error: false,
-        value: ""
+        value: "",
     }
-    componentDidMount(){ 
+
+    componentDidMount() {
         this.renderUsers();
         this.handleChange = this.handleChange.bind(this);
     }
-    renderUsers = () =>{
+
+    renderUsers = () => {
         axios.get("https://randomuser.me/api/?results=30")
-        .then((res) =>{
-            this.setState({
-                users: res.data.results
-            });
-        })
-        .catch(this.onError);
+            .then((res) => {
+                this.setState({
+                    users: res.data.results,
+                });
+            })
+            .catch(this.onError);
     }
-    onError(){
+
+    onError() {
         this.setState({
-            error: true
+            error: true,
         });
     }
+
     handleChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({ value: event.target.value });
     }
-    render(){
-        const {users,error,value} = this.state;
-        if(error === true){
-            alert("ERROR");
-        }
-        return(
+
+    render() {
+        const { users, value } = this.state;
+        return (
             <div>
                 <div className="header__panel">
                     <div className="search__block">
                         <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Enter user first name" className="search__input"/>
                     </div>
-                    <ModalWindow 
-                    users={users}
+                    <ModalWindow
+                        users={users}
                     />
-               </div>
+                </div>
                 <CaptionBar />
                 <CustomizedExpansionPanels
                     users={users}
