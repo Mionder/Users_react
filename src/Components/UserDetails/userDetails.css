@@ -1,0 +1,41 @@
+.details__wrapper {
+  background-color: #cccccc;
+  width: 100%; }
+  .details__wrapper .info__first {
+    color: #444444;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 56px;
+    padding-bottom: 0;
+    margin: 0% 10%;
+    padding-top: 20px; }
+  .details__wrapper .fa-male,
+  .details__wrapper .fa-female {
+    padding-left: 10px;
+    font-size: 32px; }
+  .details__wrapper .users__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    min-height: 200px; }
+    .details__wrapper .users__info .info__block .info__label {
+      font-size: 16px;
+      font-weight: 700;
+      color: #444444;
+      line-height: 28px;
+      margin: 0;
+      padding: 0; }
+    .details__wrapper .users__info .info__block .info__label__span {
+      font-weight: 400; }
+
+.info__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border: 4px solid #ffffff; }
+
+.details__gray {
+  background-color: #eeeeee; }
